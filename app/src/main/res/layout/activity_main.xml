@@ -41,7 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Medium Text"
+        android:text="@string/tip_percentage"
         android:id="@+id/percentTextView"
         android:hint="@string/tip_percentage"
         android:layout_gravity="center_vertical|right" />
@@ -49,7 +49,7 @@
     <SeekBar
         android:layout_width="wrap_content"
         android:layout_height="@dimen/seekBbar_height"
-        android:id="@+id/seekBar"
+        android:id="@+id/percentSeekBar"
         android:max="30"
         android:progress="15"
         android:layout_gravity="fill_horizontal" />
@@ -58,7 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Medium Text"
+        android:text="@string/tip"
         android:id="@+id/tipLabelTextView"
         android:hint="@string/tip"
         android:layout_gravity="right" />
@@ -78,7 +78,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Medium Text"
+        android:text="@string/total"
         android:id="@+id/totalLabelTextView"
         android:hint="@string/total"
         android:layout_gravity="right" />
@@ -87,7 +87,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Medium Text"
         android:id="@+id/totalTextView"
         android:layout_gravity="fill_horizontal"
         android:background="#ffe0b2"
