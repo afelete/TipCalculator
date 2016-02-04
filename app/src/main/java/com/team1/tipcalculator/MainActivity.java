@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
-
+import android.widget.Toast;
 
 
 import org.w3c.dom.Text;
@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toast.makeText(MainActivity.this, "checking", Toast.LENGTH_SHORT).show();
         //get references to programmatically manipulated views
         amountTextView = (TextView) findViewById(R.id.amountTextView);
         percentTextView = (TextView) findViewById(R.id.percentTextView);
@@ -37,15 +38,15 @@ public class MainActivity extends AppCompatActivity {
         totalTextView.setText(currencyFormat.format(0)); // set text to zero
 
         //set amountEditText 's textWatcher
-       // EditText amountEditText = (EditText) findViewById(R.id.amountEditText);
-       // amountEditText.addTextChangedListener(amountEditTextWatcher);
+       EditText amountEditText = (EditText) findViewById(R.id.amountEditText);
+       amountEditText.addTextChangedListener(amountEditTextWatcher);
 
         //set percentSeekBar's OnSeekBarChangedListener
-        //SeekBar percentSeekBar = (SeekBar) findViewById(R.id.percentSeekBar);
-        //percentSeekBar.setOnSeekBarChangeListener(seekBarListener);
+        SeekBar percentSeekBar = (SeekBar) findViewById(R.id.percentSeekBar);
+        percentSeekBar.setOnSeekBarChangeListener(seekBarListener);
 
     }
-   /* private void calculate(){
+    private void calculate(){
         //format percent and display in percentView
         percentTextView.setText(percentFormat.format(percent));
         double tip = billAmount*percent;
@@ -97,5 +98,5 @@ public class MainActivity extends AppCompatActivity {
         public void afterTextChanged(Editable s) {
 
         }
-    };*/
+    };
 }
