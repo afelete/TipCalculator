@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         amountTextView = (TextView) findViewById(R.id.amountTextView);
         percentTextView = (TextView) findViewById(R.id.percentTextView);
         totalTextView = (TextView) findViewById(R.id.totalTextView);
+        tipTextView = (TextView) findViewById(R.id.tipTextView);
         tipTextView.setText(currencyFormat.format(0)); //set text to zero
         totalTextView.setText(currencyFormat.format(0)); // set text to zero
 
